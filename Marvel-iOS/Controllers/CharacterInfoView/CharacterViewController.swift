@@ -14,7 +14,7 @@ class CharacterViewController: UIViewController {
     var imageConstrutor = ImageConstructor()
     var loadingAlert = Notification()
     
-    private var resultadoImagem: UIImageView = {
+    private var resultImage: UIImageView = {
         let view = UIImageView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -45,7 +45,7 @@ class CharacterViewController: UIViewController {
         let view = UIView(frame: UIScreen.main.bounds)
         view.backgroundColor = UIColor(named: "main")
         self.view = view
-        resultadoImagem.image = imageConstrutor.getImageData(self.character)
+        resultImage.image = imageConstrutor.getImageData(self.character)
         applyViewCode()
     }
     
@@ -60,7 +60,7 @@ extension CharacterViewController: ViewCodeConfiguration {
     func buildHierarchy() {
         view.addSubview(label)
         view.addSubview(descriptionLabel)
-        view.addSubview(resultadoImagem)
+        view.addSubview(resultImage)
     }
     
     func setupConstraints() {
@@ -79,11 +79,11 @@ extension CharacterViewController: ViewCodeConfiguration {
         
         
         //ResultadoImagem
-        resultadoImagem.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 40).isActive = true
-        resultadoImagem.heightAnchor.constraint(equalToConstant: 350).isActive = true
-        resultadoImagem.widthAnchor.constraint(equalToConstant: 350).isActive = true
-        resultadoImagem.contentMode = UIView.ContentMode.scaleAspectFit
-        resultadoImagem.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        resultImage.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 40).isActive = true
+        resultImage.heightAnchor.constraint(equalToConstant: 350).isActive = true
+        resultImage.widthAnchor.constraint(equalToConstant: 350).isActive = true
+        resultImage.contentMode = UIView.ContentMode.scaleAspectFit
+        resultImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
     func configureViews() {
@@ -107,8 +107,8 @@ extension CharacterViewController: ViewCodeConfiguration {
         
         // Image
         
-        resultadoImagem.layer.borderWidth = 10;
-        resultadoImagem.layer.borderColor = CGColor(gray: 1, alpha: 1)
+        resultImage.layer.borderWidth = 10;
+        resultImage.layer.borderColor = CGColor(gray: 1, alpha: 1)
         
         navigationItem.backButtonTitle = "Voltar"
     }
