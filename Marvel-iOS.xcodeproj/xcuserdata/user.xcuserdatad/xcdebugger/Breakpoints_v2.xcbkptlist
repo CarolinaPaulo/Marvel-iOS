@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FBEE458F-FBED-458F-856D-AC99B1E81A6F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48905728-2D8D-4F78-88D8-88AFD67BB97C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Marvel-iOS/Config/NetworkRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchGenericData(completion:onError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48905728-2D8D-4F78-88D8-88AFD67BB97C - d014f9c483ad54f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Marvel_iOS.NetworkRequest.fetchGenericData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(completion: (&#x3c4;_0_0) -&gt; (), onError: (Marvel_iOS.GenericError) -&gt; ()) -&gt; ()"
+                  moduleName = "Marvel-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/Workspace/Marvel-iOS/Marvel-iOS/Config/NetworkRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "48905728-2D8D-4F78-88D8-88AFD67BB97C - d014f9c483ad5493"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Marvel_iOS.NetworkRequest.fetchGenericData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(completion: (&#x3c4;_0_0) -&gt; (), onError: (Marvel_iOS.GenericError) -&gt; ()) -&gt; ()"
+                  moduleName = "Marvel-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/Workspace/Marvel-iOS/Marvel-iOS/Config/NetworkRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "48905728-2D8D-4F78-88D8-88AFD67BB97C - d014f9c483ad5b55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Marvel_iOS.NetworkRequest.fetchGenericData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(completion: (&#x3c4;_0_0) -&gt; (), onError: (Marvel_iOS.GenericError) -&gt; ()) -&gt; ()"
+                  moduleName = "Marvel-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/Workspace/Marvel-iOS/Marvel-iOS/Config/NetworkRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

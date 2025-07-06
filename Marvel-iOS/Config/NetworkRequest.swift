@@ -16,7 +16,7 @@ enum GenericError: Error {
 
 class NetworkRequest {
     
-    private let basePath = "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=37f8b1d0d0197e41efecfb2245031783&hash=ad0e328330fbdb456863c0a685e7dbb6&limit=50"
+    private let basePath = "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=13f643030d6da6955b8d7f04f55759b0&hash=a94119b802845e7faafd0e3a705b1bf9&limit=50"
     
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
@@ -29,7 +29,6 @@ class NetworkRequest {
     
     private let session = URLSession(configuration: configuration)
 
-    
     func fetchGenericData<T: Decodable> (completion: @escaping (T) -> (),onError: @escaping (GenericError) -> Void){
         guard let url = URL(string: self.basePath) else {
             onError(.urlError)
@@ -50,6 +49,7 @@ class NetworkRequest {
                         onError(.dataError)
                     }
                 } else {
+                    debugPrint(response)
                     onError(.serverError)
                 }
         }

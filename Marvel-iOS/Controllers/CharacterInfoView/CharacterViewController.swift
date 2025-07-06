@@ -12,7 +12,7 @@ class CharacterViewController: UIViewController {
     private var label: UILabel
     private var descriptionLabel: UILabel
     var imageConstrutor = ImageConstructor()
-    var loadingAlert = LoadingAlert()
+    var loadingAlert = Notification()
     
     private var resultadoImagem: UIImageView = {
         let view = UIImageView(frame: .zero)
