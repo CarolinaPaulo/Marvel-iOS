@@ -8,21 +8,20 @@
 import UIKit
 
 internal class ListView: UIView {
-    
+
     private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-    
+
     internal var viewModel: ListViewModelProtocol? {
         didSet{
             update()
         }
     }
-        
-    
-    init() {
+
+    internal init() {
         super.init(frame: .zero)
     }
     
@@ -31,18 +30,18 @@ internal class ListView: UIView {
     }
 
     internal func update() {
-        
+        // TO DO
     }
 
 }
 
-extension ListView: ViewCodeConfiguration {
+extension ListView: ViewCoding {
     
-    func buildHierarchy() {
+    internal func buildHierarchy() {
         addSubview(tableView)
     }
     
-    func setupConstraints() {
+    internal func setupConstraints() {
         NSLayoutConstraint.activate(
             [
                 tableView.topAnchor.constraint(equalTo: topAnchor),
@@ -54,7 +53,7 @@ extension ListView: ViewCodeConfiguration {
         )
     }
     
-    func configureViews() {
+    internal func configureViews() {
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -67,7 +66,7 @@ extension ListView: ViewCodeConfiguration {
 extension ListView: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table view data source
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharacterTableViewCell
         guard let character = viewModel?.characters[indexPath.row] else {
             return UITableViewCell()
@@ -83,24 +82,27 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.characters.count ?? 0
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    internal func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return self.frame.height*0.2
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TO DO: create delegate pattern to move navigation responsability to another class
+
 //        let viewController = CharacterViewController()
 //        let character = characters[indexPath.row]
 //        viewController.character = character
 //        self.navigationController?.pushViewController(viewController, animated: true)
+
     }
 
 }

@@ -7,9 +7,9 @@
 
 import UIKit
 
-struct ImageConstructor {
-    
-    func getImageData(_ character: Character) -> UIImage {
+internal class ImageConstructor {
+
+    internal func getImageData(_ character: Character) -> UIImage {
         var securePath: String {
             let trimmPath = character.thumbnail.path.dropFirst(4)
             let secureURL = "https" + trimmPath
@@ -22,4 +22,5 @@ struct ImageConstructor {
         
         return image
     }
+
 }

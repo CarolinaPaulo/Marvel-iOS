@@ -21,7 +21,7 @@
 		E5BF7BDC276929E7002D9D70 /* Marvel_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7BDB276929E7002D9D70 /* Marvel_iOSTests.swift */; };
 		E5BF7BE7276929E7002D9D70 /* Marvel_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7BE6276929E7002D9D70 /* Marvel_iOSUITests.swift */; };
 		E5BF7BFB27693525002D9D70 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7BFA27693525002D9D70 /* ListViewController.swift */; };
-		E5BF7C0327693590002D9D70 /* ViewCodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7C0227693590002D9D70 /* ViewCodeConfiguration.swift */; };
+		E5BF7C0327693590002D9D70 /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7C0227693590002D9D70 /* ViewCoding.swift */; };
 		E5BF7C0C276938BF002D9D70 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7C0B276938BF002D9D70 /* NetworkRequest.swift */; };
 		E5BF7C1527693BFE002D9D70 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7C1427693BFE002D9D70 /* Character.swift */; };
 		E5BF7C3027696E17002D9D70 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF7C2F27696E17002D9D70 /* CharacterTableViewCell.swift */; };
@@ -69,7 +69,7 @@
 		E5BF7BE6276929E7002D9D70 /* Marvel_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_iOSUITests.swift; sourceTree = "<group>"; };
 		E5BF7BE8276929E7002D9D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5BF7BFA27693525002D9D70 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		E5BF7C0227693590002D9D70 /* ViewCodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeConfiguration.swift; sourceTree = "<group>"; };
+		E5BF7C0227693590002D9D70 /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		E5BF7C0B276938BF002D9D70 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		E5BF7C1427693BFE002D9D70 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E5BF7C2F27696E17002D9D70 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				E5BF7C0B276938BF002D9D70 /* NetworkRequest.swift */,
-				E5BF7C0227693590002D9D70 /* ViewCodeConfiguration.swift */,
+				E5BF7C0227693590002D9D70 /* ViewCoding.swift */,
 				E5BF7C56276A98BA002D9D70 /* ImageConstructor.swift */,
 				E5627F632774FBEE0030ACE0 /* Notification.swift */,
 			);
@@ -348,7 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5BF7C0327693590002D9D70 /* ViewCodeConfiguration.swift in Sources */,
+				E5BF7C0327693590002D9D70 /* ViewCoding.swift in Sources */,
 				E5BF7C1527693BFE002D9D70 /* Character.swift in Sources */,
 				E5BF7C70276AA9D0002D9D70 /* Thumbnail.swift in Sources */,
 				CEAAFA062E1B0AA700F8AD48 /* ListViewModel.swift in Sources */,

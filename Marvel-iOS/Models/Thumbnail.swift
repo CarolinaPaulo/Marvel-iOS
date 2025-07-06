@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Thumbnail: Decodable {
+struct Thumbnail: Decodable {
     
     var path: String = ""
     var jpg: String = ""

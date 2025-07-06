@@ -11,8 +11,8 @@ class CharacterViewController: UIViewController {
     
     private var label: UILabel
     private var descriptionLabel: UILabel
-    var imageConstrutor = ImageConstructor()
-    var loadingAlert = Notification()
+    internal var imageConstrutor = ImageConstructor()
+    internal var loadingAlert = Notification()
     
     private var resultImage: UIImageView = {
         let view = UIImageView(frame: .zero)
@@ -20,7 +20,7 @@ class CharacterViewController: UIViewController {
         return view
     }()
     
-    var character: Character!
+    internal var character: Character!
     
     internal required init() {
         label = CharacterViewController.createLabel()
@@ -32,14 +32,14 @@ class CharacterViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-   static func createLabel() -> UILabel {
+    internal static func createLabel() -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.layer.cornerRadius = 20
         return label
     }
     
-    override func viewDidLoad() {
+    internal override func viewDidLoad() {
         super.viewDidLoad()
         
         let view = UIView(frame: UIScreen.main.bounds)
@@ -49,36 +49,32 @@ class CharacterViewController: UIViewController {
         applyViewCode()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    internal override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         applyViewCode()
     }
 }
 
-extension CharacterViewController: ViewCodeConfiguration {
+extension CharacterViewController: ViewCoding {
    
-    func buildHierarchy() {
+    internal func buildHierarchy() {
         view.addSubview(label)
         view.addSubview(descriptionLabel)
         view.addSubview(resultImage)
     }
     
-    func setupConstraints() {
-        //Name Character
+    internal func setupConstraints() {
+
         label.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
         label.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16).isActive = true
         label.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16).isActive = true
         label.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        
-        //Description
+
         descriptionLabel.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20).isActive = true
         descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16).isActive = true
         descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16).isActive = true
         descriptionLabel.heightAnchor.constraint(equalToConstant: 130).isActive = true
-        
-        
-        //ResultadoImagem
+
         resultImage.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 40).isActive = true
         resultImage.heightAnchor.constraint(equalToConstant: 350).isActive = true
         resultImage.widthAnchor.constraint(equalToConstant: 350).isActive = true
@@ -86,8 +82,8 @@ extension CharacterViewController: ViewCodeConfiguration {
         resultImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
-    func configureViews() {
-        // Name Character
+    internal func configureViews() {
+
         label.text = self.character.name
         label.textAlignment = .center
         label.textColor = .white
@@ -95,8 +91,7 @@ extension CharacterViewController: ViewCodeConfiguration {
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont(name: "KohinoorDevanagari-Semibold", size: 40.0)
-        
-        // Description
+
         descriptionLabel.text = self.character.description == "" ? "This character doesnt have a description" : self.character.description
         descriptionLabel.textAlignment = .center
         descriptionLabel.textColor = .white
@@ -104,14 +99,11 @@ extension CharacterViewController: ViewCodeConfiguration {
         descriptionLabel.numberOfLines = 6
         descriptionLabel.adjustsFontSizeToFitWidth = true
         descriptionLabel.font = UIFont(name: "KohinoorDevanagari-Semibold", size: 30.0)
-        
-        // Image
-        
+
         resultImage.layer.borderWidth = 10;
         resultImage.layer.borderColor = CGColor(gray: 1, alpha: 1)
         
         navigationItem.backButtonTitle = "Voltar"
     }
+
 }
-
-

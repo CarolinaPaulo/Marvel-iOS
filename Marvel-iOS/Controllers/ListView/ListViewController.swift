@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+internal class ListViewController: UIViewController {
 
-    var networkRequest: NetworkRequest
-    var listView: ListView?
+    internal var networkRequest: NetworkRequest
+    internal var listView: ListView?
 
     internal init(networkRequest: NetworkRequest) {
         self.networkRequest = networkRequest
@@ -21,18 +21,18 @@ class ListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    fileprivate func showView(model: ListViewModelProtocol) {
+    internal func showView(model: ListViewModelProtocol) {
         let customView = ListView()
         customView.viewModel = model
         self.view = customView
     }
 
-    override func viewDidLoad() {
+    internal override func viewDidLoad() {
         super.viewDidLoad()
     
     }
 
-    fileprivate func loadData(_ loading: UIAlertController) {
+    internal func loadData(_ loading: UIAlertController) {
         networkRequest.fetchGenericData { (marvelInfo: MarvelRequest) in
             self.showView(model: ListViewModel(characters: marvelInfo.data.results))
             DispatchQueue.main.async {
@@ -48,7 +48,7 @@ class ListViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    internal override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let loading = Notification().startLoader()
         present(loading, animated: true, completion: nil)

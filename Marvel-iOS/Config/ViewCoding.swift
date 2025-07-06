@@ -5,13 +5,13 @@
 //  Created by Carolina de Faria Paulo on 14/12/21.
 //
 
-protocol ViewCodeConfiguration {
+protocol ViewCoding {
     func buildHierarchy()
     func setupConstraints()
     func configureViews()
 }
 
-extension ViewCodeConfiguration {
+extension ViewCoding {
     func configureViews() {}
     
     func applyViewCode() {

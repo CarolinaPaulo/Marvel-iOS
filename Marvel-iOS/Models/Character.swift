@@ -7,14 +7,11 @@
 
 import UIKit
 
-class Character: Decodable {
+struct Character: Decodable {
     
     var id: Int?
     var name: String?
     var description: String?
     var thumbnail: Thumbnail
-//    var image: UIImage?
 
 }
-
-

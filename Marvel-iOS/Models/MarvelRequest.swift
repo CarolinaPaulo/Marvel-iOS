@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MarvelRequest: Decodable {
+struct MarvelRequest: Decodable {
     var data: CharactersInfo
 }
 
